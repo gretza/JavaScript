@@ -1,88 +1,217 @@
-// let svoris = prompt("Koks jūsų svoris? (kg)");
-// let svorisKg = Number(svoris);
+// let i = 0;
 
-// let ugis = prompt("Koks jūsų ūgis? (centimetrais)");
-// let ugisCm = Number(ugis);
+// i += 3; // i = 1 + 3;
 
-// let ugisCmKv = ugisCm**2;
+// console.log("pirmas", i);
 
+// i++; // i += 1; i = i + 1;
+
+// console.log("antras", i);
+
+// ++i; // i++, bet yra vienas skirtumas
+
+// console.log("trecias", i);
+
+//------------------------------------------------------------------
+
+// let y = 0;
+
+// y = y + 1 //y++ //1
+
+// console.log(y++); // 1 | 1. console.log; 2. y += 1; // 2
+// console.log(y); // 2
+// console.log(++y); // 3 | 1. y += 1;      2. console.log; // 3
+
+//-----------------------------------------------------------------
+
+/*
+    1. >
+    2. <
+    3. >=
+    4. <=
+    5. == | reikšmės turi sutapti, nes tipus suvienodina
+    6. === | reikšmės ir tipai sutapti turi
+    7. !=
+    8. !==
+*/
+
+// console.log(1 == "1"); // true
+// console.log(1 === "1"); // false
+
+// console.log("A" > "Z"); //false | pagal abecele tikrina
+// console.log("Z" > "A"); //true
+
+// const x = "asd";
+// const y = "xz";
+// console.log(x.length > y.length); // true
+
+// 5 > 4; // true
+// "apple" > "pineapple"; // false
+// "2" > "12"; // true
+// undefined == null; // true | abu reiksmes neturi, todel tinka
+// undefined === null // false
+// null == "\n0\n"; // false
+// null === +"\n0\n"; // false
+
+//--------------------------------------------------------------
+
+// const metai = prompt("Kurie dabar metai?");
+
+// let x;
+
+// if (metai === "2022") { // šita sąlygą viską vers į Boalean jos viduje
+//     alert("Tu teisus!");
+//     x = 0;
+// }   else {
+//     alert("Tu neteisus!");
+//     x = 1;
+// }
+
+// console.log(x); //1 arba 0
+
+//kai randama, kad kažkuri sąlyga atitinka - toliau neskaitoma tas blokas ir ištrinama nereikalinga info, todel kintamuosiu reikia deklaruoti issoreje
+
+//-------------------------------------------------------------
+
+// const metai = prompt("Kurie dabar metai?");
+// if (Number(metai) < 2000) {
+//     alert("Visiškai nepataikei"); // +
+// } else if (metai === "2022") { // šita sąlygą viską vers į Boalean jos viduje
+//     alert("Tu teisus!");
+// }   else {
+//     alert("Tu neteisus!");
+// }
+
+//--------------------------------------------------------------
+
+// Užduotis su medžiu
+
+// const colour = prompt("Kokia spalva? (red, yellow, blue)");
+// const model = prompt("Koks modelis? (įrašykite metus)");
+// const make = prompt("Kokia marke?(ferrari, etc.)");
+// const mileage = prompt("Kokia rida? (kiek km nuvažiuota)");
+
+// if (colour === "red") {
+//   if (Number(model) > 2010) {
+//     alert("Buy!");
+//   } else if (Number(mileage) < 50000) {
+//     alert("Buy!");
+//   } else {
+//     alert("Don't buy!");
+//   }
+// } else {
+//   if (colour === "yellow") {
+//     if (make === "ferrari") {
+//       alert("Buy!");
+//     } else {
+//       alert("Don't buy!");
+//     }
+//   } else {
+//     alert("Don't buy!");
+//   }
+// }
+
+//----------------------------------------------------
+
+// Uzduotis BMI
+
+// const svoris = Number(prompt("Koks jūsų svoris? (kg)"));
+// const ugisKv = Number(prompt("Koks jūsų ūgis? (centimetrais)"))**2;
 // const daugiklis = 10_000;
+// const KMI = svoris / ugisKv * daugiklis
 
-// let bmi = svorisKg / ugisCmKv * daugiklis;
+// if (KMI < 18.5) {
+//     alert("Under weight")
+// } else if (KMI < 25) {
+//     alert("Normal")
+// } else if (KMI < 30) {
+//     alert("Over weight")
+// } else if (KMI < 35) {
+//     alert("Obesity(Class I)")
+// } else if (KMI < 40) {
+//     alert("Obesity(Class II)")
+// } else {
+//     alert("Extreme Obesity")
+// }
 
-// console.log(bmi);
+// // Uzduotis BMR
 
-// alert(`Jūsų BMI yra ${bmi}`)
+// For men: BMR = 66.5 + (13.75 * weight in kg) + (5.003 * height in cm) - (6.75 * age)
+// For women: BMR = 655.1 + (9.563 * weight in kg) + (1.850 * height in cm) - (4.676 * age)
 
+// To determine your total daily calorie needs, multiply your BMR by the appropriate activity factor, as follows:
+// Sedentary (little or no exercise): calories = BMR × 1.2;
+// Lightly active (light exercise/sports 1-3 days/week): calories = BMR × 1.375;
+// Moderately active (moderate exercise/sports 3-5 days/week): calories = BMR × 1.55;
+// Very active (hard exercise/sports 6-7 days a week): calories = BMR × 1.725; and
+// If you are extra active (very hard exercise/sports & a physical job): calories = BMR × 1.9.
+// // suvedami atsakymai ar esam vyras/moteris, svoris aukštis ir amžius.
+// // atsakomas koks mūsų aktyvumo lygis
+// // atsakomas kiek kalorijų mums reikia per dieną
 
-// 2.
-// console.log(Number("123")); 123
-// con
+// const gender = prompt("Esate vyras ar moteris?");
+// const weight = Number(prompt("Koks jūsų svoris? (kg)"));
+// const height = Number(prompt("Koks jūsų ūgis? (cm)"));
+// const age = Number(prompt("Koks jūsų amžius?"));
+// const activityLevel = Number(prompt("Koks jūsų aktyvumo lygis? (0,1,2,3 arba 4)"));
+// let BMR;
 
-// console.log(Boolean("")); //false
-// console.log(Boolean(0)); //false
+// if (gender = "vyras") {
+//     BMR = 66.5 + (13.75 * weight) + (5.003 * height) - (6.75 * age);
+// } else {
+//     BMR = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age);
+// }
 
-// console.log(Boolean("a")); //true
-// console.log(Boolean(1)); //true
-// console.log(Boolean(-1)); //true
+// if (activityLevel === 0) {
+//     alert(BMR * 1.2)
+// } else if (activityLevel === 1) {
+//     alert(BMR * 1.375)
+// } else if (activityLevel === 2) {
+//     alert(BMR * 1.55)
+// } else if (activityLevel === 3) {
+//     alert(BMR * 1.725)
+// } else {
+//     alert(BMR * 1.9)
+// }
 
-// console.log(Number(true)); // 1
-// console.log(Number(false)); // 0
+// Uzduotis: Project development
 
-// 3.
-// console.log(1/2); //0.5
-// console.log(2*2.5); //5
-// console.log(4**2.5); //16
-// console.log(4**(1/2)); //2
+// let year = prompt("In which year was the ECMAScript-2015 specification published?");
+//   if (year == 2015) {
+//     alert("You guessed it right!");
+//   } else {
+//     alert("How can you be so wrong?"); // any value except 2015
+//   }
 
-// 4.
-// console.log(7/2); //3.5
-// console.log(7%2); //1 (liekana)
+let budget = prompt("Definite budget? (yes/no)");
+let champion = prompt("Known champion for it? (yes/no)");
+let scope = prompt("Clear project scope? (yes/no)");
+let timescale = prompt("Archievable Timescale? (yes/no)");
+let profit = prompt("Happy to profit? (yes/no)");
+let funding = prompt("Alternative funding? (yes/no)");
 
-// 5.
-// let pirmasZodis = "Vardenis";
-// let antrasZodis = "Pavardenis";
-// let pilnaFraze = `${pirmasZodis} ${antrasZodis}`; //String template
-// let kitaFraze = pirmasZodis + " " + antrasZodis; //"Vardenis Pavardenis"
-
-// 6.
-// console.log("1" + 2); // 12, nes 2 pavercia i stringa
-// console.log(2 + "1"); // 21
-// console.log("1" + 2 + 2); // 122
-// console.log(2 + 2 + "1"); // 41
-
-// 7.
-// const pradzia = 18;
-// const valandos = Number(prompt("Kiek dabar valandų?")); // 4
-// const minutes = Number(prompt("Kiek dabar minučių?")); // 0
-
-
-// let minuciuTikrinimas = minutes > 0; //boolean true
-// let valandosKeitimas = Number(minuciuTikrinimas); //1
-// let skirtumasValandu = valandos - valandosKeitimas;
-// let likutisValandu = pradzia - skirtumasValandu;
-
-// let likutisMinuciu = (60 - minutes) * valandosKeitimas;
-
-// /*
-// Jeigu valandos keitimas yra vienetas, mes rodome minuciu likuti,
-// jeigu valandos keitimas yra 0, mes rodome 0 minuciu likuti
-// */
-
-// alert(`Iki paskaitos liko ${likutisValandu} valandų ir ${likutisMinuciu} min.`)
-
-
-8.
-console.log("A", "" + 1 + 0); //A 10
-console.log("B", "" - 1 + 0); //B -1
-console.log("C", true + false); //C 1
-console.log("D", 6 / "3"); //D 2
-console.log("E", "2" * "3"); //E 6
-console.log("F", 4 + 5 + "px"); //F 9px
-console.log("G", "$" + 4 + 5); //G $45
-console.log("H", "4" - 2); //H 2
-console.log("I", "4px" - 2); //I 4px-2 ---> NaN
-console.log("J", "  -9  " + 5); //J -9+5 --> -9 5
-console.log("K", "  -9  " - 5); //K -14
-console.log("L", null + 1); //L, 1
-console.log("M", undefined + 1); //M, 1 --> NaN
+if (budget === "yes") {
+  if (champion === "yes") {
+    if (scope === "yes") {
+      if (timescale === "yes") {
+        alert("Go for it.");
+      } else {
+        alert("Get more time.");
+      }
+    } else {
+      if (profit === "yes") {
+        alert("Cash in.");
+      } else {
+        alert("Explain why it matters");
+      }
+    }
+  } else {
+    alert("Leave it alone.");
+  }
+} else {
+  if (funding === "yes") {
+    alert("Sort out funding.");
+  } else {
+    alert("Leave it alone.");
+  }
+}
