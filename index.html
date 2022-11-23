@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript pradzia</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
-</head>
-<body>
-    <div id="">Hello</div>
-</body>
+  </head>
+  <body>
+    <!-- <div id="dropdown">
+        <button onclick="toggle()">Click me!</button>
+        <div class="dropdown-menu active">My dropdown</div>
+    </div> -->
+
+    <div id="accordeon" class="accordeon-item">
+      <div class="accordeon-header" onclick="toggle()">Question</div>
+      <div class="accordeon-content active">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum dolore,
+        debitis iste corporis voluptate fugiat delectus vero repellendus placeat
+        doloremque iusto quas? Nulla, corporis est numquam sapiente molestiae
+        eum cum.
+      </div>
+    </div>
+  </body>
 </html>

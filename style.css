@@ -1,0 +1,32 @@
+/* #dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: grey;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+.dropdown-menu.active {
+    display: block;
+} */
+
+#accordeon {
+    position: relative;
+}
+
+.accordeon-content {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    display: none;
+}
+
+.accordeon-content.active {
+    display: block;
+}
