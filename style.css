@@ -16,7 +16,7 @@
     display: block;
 } */
 
-#accordeon {
+/* #accordeon {
     position: relative;
 }
 
@@ -29,4 +29,27 @@
 
 .accordeon-content.active {
     display: block;
+} */
+
+/* 20221123 */
+/* 1. */
+/*
+Kad galėtume naudoti var(), elementas turi būti vaikas to elemento, kuriame apra6yti kintamieji
+*/
+
+/* body.light {
+    --color: #000;
+    --bgColor: #fff;
+    background-color: #fff;
 }
+
+body.dark {
+    --color: #fff;
+    --bgColor: #000;
+    background-color: #000;
+}
+
+p {
+    color: var(--color);
+    background-color: var(--bgColor);
+} */
