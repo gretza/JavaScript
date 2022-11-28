@@ -13,6 +13,8 @@
 
 // operatoriai
 // ===, +, -, *, /, >, <, **, !==, >=, <=, %
+// and - &&     IR
+//  or - ||     ARBA
 
 // if () {},  else if () {}, else {}
 // function () {}
