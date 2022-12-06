@@ -1,0 +1,37 @@
+/**
+*
+* (2 x 22) x 2 = 88
+*
+* 1. (spaudžiam ant skaičiaus mygtuko) Išsaugom skaičių display.innerText'e.
+*    operationType === undefined
+*    innerText === "2"
+*    temporaryValue === undefined
+*
+* 2. Išsaugom vertę temporaryValue ir nustatom operacijos tipą.
+*    operationType === "multiply"
+*    innerText === ""
+*    temporaryValue === 2
+*
+* 3. Įvedam 22, atsivaizduoja display
+*    operationType === "multiply"
+*    innerText === "22"
+*    temporaryValue === 2
+*
+* 4. Kai paspaudžiam x operatorių antrą kartą, mes turime apskaičiuoti seną vertę.
+*    Atliekam skaičiavimus ir išsaugom juos į temporaryValue.
+*
+*    Patikrinam ar yra jau egzistuojantis operationType (IF)
+*    Jei egzistuoja:
+*      Skaičuojam rezultatą
+*
+*    operationType === "multiply"
+*    innerText === ""
+*    temporaryValue === 44
+*
+* 5. Įvedam 2 ir jis atsivaizduoja inner text'e
+*    operationType === "multiply"
+*    innerText === "2"
+*    temporaryValue === 44
+*
+* 6. suveikia calculateResult()
+*/
