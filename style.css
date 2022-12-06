@@ -1,0 +1,36 @@
+* {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: beige;
+}
+
+.container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-container {
+    border: 1px solid black;
+    height: 200px;
+    width: 400px;
+}
+
+.generate-btn {
+    border: none;
+    background-color: rgb(7, 129, 88);
+    color: #fff;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.generate-btm:hover {
+    background-color: rgb(4, 88, 60);
+}
