@@ -1,16 +1,11 @@
-const generateColorBtn = document.querySelector(".generate-btn");
-const colorValueElement = document.querySelector("#color-value");
-const colorContainer = document.querySelector(".color-container");
+const btn = document.querySelector("#click-btn");
+const input = document.querySelector(".input");
+const inputValue = document.querySelector("#input-value");
 
-generateColorBtn.addEventListener("click", generateRandomColor);
-window.addEventListener ("load", generateRandomColor);
+btn.addEventListener("click", logInput);
 
-function generateRandomColor() {
-    const randomRGB = `rgb(${getRandomRGBNumber()}, ${getRandomRGBNumber()}, ${getRandomRGBNumber()})`;
-    colorContainer.style.backgroundColor = randomRGB;
-    colorValueElement.textContent = randomRGB
-}
-
-function getRandomRGBNumber() {
-    return Math.floor(Math.random() * 256)
+function logInput() {
+    const now = new Date().toLocaleString();
+    console.log(now);
+    inputValue.textContent = now;
 }
