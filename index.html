@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="./main.js" defer></script>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <button id="click-btn">Click Me</button>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- <button id="click-btn">Click Me</button>
     <input class="input" type="text">
-    <p id="input-value"></p>
-</body>
+    <p id="input-value"></p> -->
+
+    <div class="container">
+      <div class="audit-container">
+        <p>First name: <span></span></p>
+        <p>Last name: <span></span></p>
+        <p>Email address: <span></span></p>
+        <p>Complaint: <span></span></p>
+        <p>Date of complaint: <span></span></p>
+      </div>
+      <div class="form-container">
+        <div class="form-content">
+          <div class="close-container">
+            <button class="close-btn">&times;</button>
+          </div>
+          <form action="get">
+            <p>
+              We are here to help you, if you want to fill a complaint with us
+              then please fill this form and submit it. We are pushing ourselves
+              and will look into each and every complaint that we received
+            </p>
+            <p class="mistake">Please correct mistakes made in your complaint form.</p>
+            <label for="f-name">First name:</label><br />
+            <input type="text" name="f-name" id="f-name" /><br />
+
+            <label for="l-name">Last name:</label><br />
+            <input type="text" name="l-name" id="l-name" /><br />
+
+            <label for="email">Email:</label><br />
+            <input type="mail" name="email" id="email" /><br />
+
+            <label for="complaint">Complaint:</label><br />
+            <textarea name="complaint" id="complaint" cols="30" rows="10"></textarea>
+
+            <button type="submit" id="submit">Submit</button>
+          </form>
+        </div>
+        <div class="help-container">
+          <button id="help">Help</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
