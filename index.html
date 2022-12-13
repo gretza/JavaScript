@@ -5,53 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./main.js" defer></script>
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
   </head>
   <body>
-    <!-- <button id="click-btn">Click Me</button>
-    <input class="input" type="text">
-    <p id="input-value"></p> -->
+    <main class="container"></main>
 
-    <div class="container">
-      <div class="audit-container">
-        <p>First name: <span></span></p>
-        <p>Last name: <span></span></p>
-        <p>Email address: <span></span></p>
-        <p>Complaint: <span></span></p>
-        <p>Date of complaint: <span></span></p>
-      </div>
-      <div class="form-container">
-        <div class="form-content">
-          <div class="close-container">
-            <button class="close-btn">&times;</button>
-          </div>
-          <form action="get">
-            <p>
-              We are here to help you, if you want to fill a complaint with us
-              then please fill this form and submit it. We are pushing ourselves
-              and will look into each and every complaint that we received
-            </p>
-            <p class="mistake">Please correct mistakes made in your complaint form.</p>
-            <label for="f-name">First name:</label><br />
-            <input type="text" name="f-name" id="f-name" /><br />
+    <!-- <select id="ice-cream" name="ice-cream">
+        <option value="">Select One …</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="sardine">Sardine</option>
+        <option value="vanilla">Vanilla</option>
+      </select> -->
 
-            <label for="l-name">Last name:</label><br />
-            <input type="text" name="l-name" id="l-name" /><br />
+    <!-- <select name="gender" id="gender">
+      <option value="">Choose your gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <select name="age" id="age">
+        <option value="">Choose your age</option>
+        <option value="young">Young</option>
+        <option value="adult">Adult</option>
+        <option value="old">Old</option>
+    </select>
+    <p id="change-log"></p> -->
 
-            <label for="email">Email:</label><br />
-            <input type="mail" name="email" id="email" /><br />
+    <!-- <input type="text" id="my-input"> -->
 
-            <label for="complaint">Complaint:</label><br />
-            <textarea name="complaint" id="complaint" cols="30" rows="10"></textarea>
+    <label for="">1st Number: </label>
+    <input type="text" id="first-number" />
 
-            <button type="submit" id="submit">Submit</button>
-          </form>
-        </div>
-        <div class="help-container">
-          <button id="help">Help</button>
-        </div>
-      </div>
-    </div>
+    <label for="">2nd Number: </label>
+    <input type="text" id="second-number" />
+
+    <button id="multiply">Multiply</button>
+    <button id="divide">Divide</button>
+
+    <p>The Result Is:</p>
+    <p id="result"></p>
   </body>
 </html>
