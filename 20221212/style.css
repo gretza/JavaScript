@@ -1,92 +1,102 @@
 * {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: beige;
   font-family: "Courier New", Courier, monospace;
 }
 
-button {
-  cursor: pointer;
+body {
+  margin: 1rem;
+  background-color: beige;
 }
 
-input {
-  width: 100%;
-}
-
-.audit-container > p {
-  margin: 0;
-  padding: 2px;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.form-container {
-  position: relative;
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-content {
+.help-dialog {
   display: none;
-  position: absolute;
-  background-color: aliceblue;
-  padding: 20px;
   border: 1px solid black;
-  top: 70px;
-}
-
-.close-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.close-btn {
-  border: none;
-  background-color: initial;
-}
-
-.mistake {
-  display: none;
-  color: red;
-}
-
-#complaint {
-  height: 100px;
-  resize: none;
-}
-
-#submit {
-  border: none;
-  width: 100%;
-  margin-top: 5px;
-  border-radius: 10px;
-  color: white;
-  background-color: blueviolet;
-  padding: 5px;
+  height: 315px;
+  width: 200px;
+  padding: 1rem;
+  background-color: aliceblue;
+  animation-name: dialog-open;
+  animation-duration: 0.5s;
 }
 
 .help-container {
-  position: fixed;
-  display: flex;
-  justify-content: flex-end;
   position: absolute;
-  top: 640px;
-  right: 0;
+  bottom: 1rem;
+  right: 1rem;
 }
 
-#help {
-  border: none;
-  width: 70px;
-  margin-top: 5px;
-  border-radius: 5px;
+.help-btn,
+#submit {
+  background-color: rgb(113, 113, 235);
   color: white;
-  background-color: blueviolet;
-  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.help-btn {
+  float: right;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.help-btn:hover,
+#submit:hover {
+  background-color: rgb(86, 86, 236);
+}
+
+.help-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.help-form input {
+  margin-bottom: 0.5rem;
+}
+
+.dialog-info-text {
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+#complaint {
+  height: 80px;
+  resize: none;
+}
+
+.help-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.help-dialog-close-btn {
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
+
+#submit {
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.validation-error {
+  display: none;
+  color: red;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes dialog-open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

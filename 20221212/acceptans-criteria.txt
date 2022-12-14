@@ -13,3 +13,6 @@ Acceptance Criteria:
 5. If form is valid then submit it
     a. clear all, if any, errors, clear input values and close dialog
     b. fill in audit info fields with user input
+
+
+    title, span-id, span-content$

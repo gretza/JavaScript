@@ -4,54 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="./main.js" defer></script>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>Events Exercise</title>
   </head>
   <body>
-    <!-- <button id="click-btn">Click Me</button>
-    <input class="input" type="text">
-    <p id="input-value"></p> -->
-
-    <div class="container">
-      <div class="audit-container">
-        <p>First name: <span></span></p>
-        <p>Last name: <span></span></p>
-        <p>Email address: <span></span></p>
-        <p>Complaint: <span></span></p>
-        <p>Date of complaint: <span></span></p>
-      </div>
-      <div class="form-container">
-        <div class="form-content">
-          <div class="close-container">
-            <button class="close-btn">&times;</button>
-          </div>
-          <form action="get">
-            <p>
-              We are here to help you, if you want to fill a complaint with us
-              then please fill this form and submit it. We are pushing ourselves
-              and will look into each and every complaint that we received
-            </p>
-            <p class="mistake">Please correct mistakes made in your complaint form.</p>
-            <label for="f-name">First name:</label><br />
-            <input type="text" name="f-name" id="f-name" /><br />
-
-            <label for="l-name">Last name:</label><br />
-            <input type="text" name="l-name" id="l-name" /><br />
-
-            <label for="email">Email:</label><br />
-            <input type="mail" name="email" id="email" /><br />
-
-            <label for="complaint">Complaint:</label><br />
-            <textarea name="complaint" id="complaint" cols="30" rows="10"></textarea>
-
-            <button type="submit" id="submit">Submit</button>
-          </form>
+    <!-- <div>
+      <p>First Name: <span id="first-name-log"></span></p>
+      <p>Last Name: <span id="last-name-log"></span></p>
+      <p>Email address: <span id="email-log"></span></p>
+      <p>Complaint: <span id="complaint-log"></span></p>
+      <p>Date of complaint: <span id="date-log"></span></p>
+    </div> -->
+    <div id="register-container"></div>
+    <div class="help-container">
+      <div class="help-dialog">
+        <div class="help-dialog-header">
+          <button class="help-dialog-close-btn">&times;</button>
         </div>
-        <div class="help-container">
-          <button id="help">Help</button>
-        </div>
+        <p class="dialog-info-text">
+          We are here to help you, if you want to fill a complaint with us then
+          please fill this form and submit it. We are pushing ourselves to meet
+          all of our customers demands and will look into each and every
+          complaint that we receive
+        </p>
+        <form class="help-form">
+          <p class="validation-error">
+            Please correct mistakes made in your complaint form.
+          </p>
+          <label for="firstName">First name: </label>
+          <input id="firstName" required />
+          <label for="lastName">Last name: </label>
+          <input id="lastName" required />
+          <label for="email">Email: </label>
+          <input id="email" type="email" required />
+          <label for="complaint">Complaint: </label>
+          <textarea id="complaint" name="complaint" required></textarea>
+        </form>
+        <button id="submit">Submit</button>
       </div>
+      <button class="help-btn">Help</button>
     </div>
   </body>
 </html>
