@@ -1,0 +1,32 @@
+/*
+
+Programa pradeda veikti paspaudus pliusiuką.
+
+- pasiimam tekstą iš inputo
+
+- tikrinam ar tekstas yra
+
+   - Jei nėra:
+
+     - atsiranda raudonas border ant inputo.
+
+     - return
+
+
+
+   - Jei yra:
+
+    - Sukuriam naują elementą su dviem mygtukais.
+
+    - Į elementą įdedam tekstą.
+
+    - Prie mygtukų prikabinam atskiras funkcijas. Jos aprašomos kitame flow.
+
+    - Įdėti elementą į DOM. (dokumento medį)
+
+
+
+x -> ištrina;
+V -> išsaugo "text", ištrina, sukuria nauja
+
+*/
