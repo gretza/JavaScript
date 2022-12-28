@@ -1,0 +1,36 @@
+Create a wizard for user to register:    1. Wizard should be be in four steps:
+        a. step 1 three fields:
+            i. first name (required)
+            ii. last name (required)
+            iii. email (required)
+        b. step 2 three fields:
+            i. primary address (required)
+            ii. secondary address (optional)
+            iii. shirt size (required)
+        c. step 3 two fields:
+            i. password (required)
+            ii. repeat password (required)
+        d. step 4 should display final object
+    2. User can click on 'Continue' button to move forward in steps
+        a. User should not be able to move to the next step if his current step has validation errors
+    3. If user is not in step 1 then 'Back' button should be displayed to move backwards in steps
+    4. Validation should be inplemented for each step:
+        a. for required fields, their border should be changed to red if validation doesn't pass
+        b. step 3 should also check if passwords match, if they don't then additionally display error message above 'Passwords should match!'
+        c. email validation should also check if email is of valid format
+    5. Errors should be cleared on step changed
+
+Final object example(step value depends on if you count from 0 or 1, so its final value should be either 3 or 4):
+Text
+{​
+    step: 3 // first wizard step is considered a 0
+    user: {​
+        firstName: 'Vardenis',
+        lastName: 'Pavardenis',
+        email: 'email@email.com',
+        primaryAddress: 'Vilniaus g. 3, Vilnius',
+        secondaryAddress: 'Petro g. 4, Kaunas', // this is an optional property, if user doesn't fill secondaryAddress input then this property should not exist in user object
+        shirtSize: 'L',
+        password: '123',
+    }​
+}​

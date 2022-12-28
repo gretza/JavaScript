@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <!-- <button id="click-btn">Click Me</button>
+    <input type="text" name="input" id="input">
+    <p id="input-value"></p>
+    <div id="event-target-test">
+        <p>Hello!</p>
+        <p>Bye!</p>
+    </div>
+    <select>
+        <option>Option 1</option>
+        <option>Option 2</option>
+    </select> -->
+
+    <header class="header">Budget Tracker</header>
+
+    <main>
+      <div class="container">
+        <div class="form-container">
+          <select name="form-type" id="form-type">
+            <option>Current budget</option>
+            <option>Add expense</option>
+          </select>
+
+          <div class="budget-container">
+            <label for="budget">Budget:</label>
+            <input type="number" name="budget" id="budget" />
+            <button id="submit-budget" type="submit">Submit Budget</button>
+            <p id="current-budget">Current balance after expenses: <span id="balance"></span></p>
+          </div>
+
+          <div class="expense-container">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <label for="spent-ammount">Spent Ammount:</label>
+            <input type="number" id="spent-ammount" name="spent-ammount">
+            <label for="expense-type">Expense Type:</label>
+            <select name="expense-type" id="expense-type">
+                <option>Groceries</option>
+                <option>Utilities</option>
+                <option>Car</option>
+                <option>Leisure</option>
+                <option>Clothing</option>
+            </select>
+            <label for="notes">Notes:</label>
+            <textarea name="notes" id="notes"></textarea>
+            <button type="submit" id="save-expense">Save Expense</button>
+          </div>
+        </div>
+
+        <div id="registrator"></div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,57 +1,68 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
-    font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
 }
 
 body {
-    background-color: beige;
+  background-color: beige;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header {
-    background-color:rgb(107, 84, 220);
-    color: white;
-    text-align: center;
-    padding: 2px;
+form {
+  background-color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.container {
-    padding: 10px;
-    display: flex;
-    gap: 20px;
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 200px;
+  height: 200px;
 }
 
-.form-container {
-    flex: 1;
+.hidden {
+  display: none;
 }
 
-#form-type {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
+input {
+  width: 100%;
 }
 
-.budget-container,
-.expense-container {
-    background-color: azure;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.expense-container {
+#psw-error {
+    color: red;
     display: none;
 }
 
-#notes {
-    resize: vertical;
+#result {
+  background-color: gray;
+  border: none;
+  resize: none;
+  color: white;
 }
 
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
-#registrator {
-    flex: 1;
+button {
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.error {
+  border-color: red;
 }

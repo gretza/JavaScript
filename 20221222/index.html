@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <label for="new-key">New Key</label>
+            <input type="text" id="new-key" name="new-key">
+            <label for="existing-keys">Existing Keys</label>
+            <option disabled selected value name="existing-keys" id="existing-keys"> Select a Key </option>
+            <label for="value">Value</label>
+            <input type="text" name="value" id="value">
+            <button type="submit" id="button">Update Object</button>
+        </div>
+        <div class="output">
+            <textarea name="text" id="text"></textarea>
+        </div>
+    </div>
+</body>
+</html>
