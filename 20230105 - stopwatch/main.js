@@ -158,7 +158,10 @@ paleidus funkciją, gautą objektą išlogginti.
 
 
 //-------------------STOPWATCH---------------------------------
-import timerState from "./state.js"
+import TimerState from "./state.js";
+import { formatTime } from "./utilities.js";
+
+const state = new TimerState();
 
 const elements = {
     startBtn: document.querySelector('#btn-start'),
@@ -170,15 +173,15 @@ function updateTimerText(timeElapsed) {
     const seconds = timeElapsed % 60;
     const minutes = Math.floor(timeElapsed / 60) % 60;
     const hours = Math.floor(Math.floor(timeElapsed / 60) / 60);
-    elements.timerBox.textContent = `${hours}:${minutes}:${seconds}`;
+    elements.timerBox.textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
 };
 
 elements.startBtn.addEventListener('click', function(){
-    timerState.start(updateTimerText);
+    state.start(updateTimerText);
 });
 
 elements.stopBtn.addEventListener('click', function(){
-    timerState.stop();
+    state.stop();
 });
 
 // let time = 0;
