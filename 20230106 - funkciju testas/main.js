@@ -17,7 +17,7 @@ function firstFunction(argument) {
 
 console.log(firstFunction(""), firstFunction(2), firstFunction(3 < 4));
 
-// UNCLEAR-------------------------------------------------------------
+//-------------------------------------------------------------
 addSeperator("Task 2");
 /*
 2. Write a function that accepts a number as a parameter and check the number is prime or not.
@@ -37,7 +37,7 @@ function secondFunction(prime) {
 console.log(secondFunction(7), secondFunction(15));
 
 
-//TEISINGAS SPRENDIMAS------
+//TEISINGAS SPRENDIMAS -------------------------------------------------------------
 const checkIsPrime = (number) => {
 
   const testNumber = (x) => {
@@ -85,7 +85,7 @@ function thirdFunction(dollarsOrEuros, currency) {
 
 console.log(thirdFunction("$", "2"), thirdFunction("€", "2"));
 
-// TEISINGAS SPRENDIMAS----------------
+//TEISINGAS SPRENDIMAS -------------------------------------------------------------
 
 const currencySymbolMap = {
   $: "dollars",
@@ -101,7 +101,7 @@ const convertCurrency = (valueToConvert, convertTo) => {
     return valueToConvert;
   }
 
-  return convertTo === "dollars" ? : `$${currencyValue * 1.05}` : `$${currencyValue * 0.95}`;
+  return convertTo === "dollars" ? : `$${currencyValue * 1.05}` : `€${currencyValue * 0.95}`;
 
   // is the same as ternary operator in line 104
   // if (convertTo === "dollars") {
@@ -109,7 +109,7 @@ const convertCurrency = (valueToConvert, convertTo) => {
   // }
 
   // if (convertTo === "euros") {
-  //   return `$${currencyValue * 0.95}`;
+  //   return `€${currencyValue * 0.95}`;
   // }
 
 };
@@ -132,6 +132,30 @@ function fourthFunction(hello) {
 
 fourthFunction(hello);
 
+//TEISINGAS SPRENDIMAS -------------------------------------------------------------
+
+const startEngine = (onSuccess, onFail) => {
+  const engineStarted = true;
+
+  engineStarted ? onSuccess() : onFail(); //tas pats, kas 142-146
+
+  // if(engineStarted) {
+  //   onSuccess();
+  // } else {
+  //   onFail()
+  // }
+};
+
+const onSuccess = () => {
+  console.log('Engine started.')
+}
+
+const onFail = () => {
+  console.log('Engine failed to start.')
+}
+
+startEngine(onSuccess, onFail)
+
 //-------------------------------------------------------------
 addSeperator("Task 5");
 /*
@@ -145,6 +169,14 @@ function fifthFunction(degreesFahrenheit) {
 
 console.log(fifthFunction(500));
 
+//TEISINGAS SPRENDIMAS -------------------------------------------------------------
+
+const convertFahrenheitToCelcius = (fahrenheit) => {
+  return celcius = (fahrenheit - 32) * 0.5556;
+};
+
+console.log(convertFahrenheitToCelcius(50));
+
 //-------------------------------------------------------------
 addSeperator("Task 6");
 /*
@@ -152,8 +184,7 @@ addSeperator("Task 6");
 */
 
 function sixthFunction(width, hight) {
-  rectangleArea = width * hight;
-  return rectangleArea;
+ return width * hight;
 }
 
 console.log(sixthFunction(4, 5));
@@ -174,6 +205,14 @@ function seventhFunction(radius) {
 }
 
 seventhFunction(10);
+
+//TEISINGAS SPRENDIMAS -------------------------------------------------------------
+
+const gerCircleAreaAndPerimeter = (radius) => {
+  const perimeter = 2 * Math.PI * radius;
+  const are = Math.PI * Math.pow(radius, 2);
+  return `Circle of radius ${radius} has permiter of ${Math.floor(perimeter * 100) / 100} and area of ${Math.floor(area * 100) / 100}`
+}
 
 //-------------------------------------------------------------
 addSeperator("Task 8");
@@ -214,3 +253,13 @@ function bonusFunction(number) {
 };
 
 console.log(bonusFunction(4));
+
+//TEISINGAS SPRENDIMAS -------------------------------------------------------------
+
+const getFactorial = (number) => {
+  if (number <= 1) {
+    return 1;
+  }
+
+  return number * getFactorial(number - 1);
+}
