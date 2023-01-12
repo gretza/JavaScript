@@ -1,0 +1,26 @@
+.lap-container {
+    display: flex;
+};
+
+.container {
+    max-width: 960px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 2rem;
+}
+
+.timer {
+    min-height: 400px;
+    border: 1px solid black;
+    padding: 1 rem;
+}
+
+.timer-clock {
+
+}

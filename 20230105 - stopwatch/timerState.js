@@ -32,27 +32,48 @@
 // export default state;
 
 class TimerState {
-  constructor() {
+  constructor({updateTime, setLap, clearLaps}) {
     this.secondsElapsed = 0;
+    this.lastLapTime = 0;
+    this.lapNumber = 0;
     this.intervalId = null;
+    this.updateTime = updateTime;
+    this.setLap = setLap;
+    this.clearLaps = clearLaps;
+    this.updateTime(0);
+
   };
 
-  start(updateCallBack) {
-    // paleisti intervalą, kuris tiksi ir didina laiką
+  start() {
     if (!this.intervalId){
-    this.intervalId = setInterval(() =>{
+    this.intervalId = setInterval(() => {
         this.secondsElapsed++;
-        updateCallBack(this.secondsElapsed);
+        this.updateTime(this.secondsElapsed);
     }, 1000);
     }
   };
 
   stop() {
-    // sustabdo intervalą, kuris "tiksi"
     if(this.intervalId) {
     clearInterval(this.intervalId);
     this.intervalId = null;
     };
+  };
+
+  lap() {
+    this.lapNumber++;
+    const lapTime = this.secondsElapsed - this.lastLapTime;
+    this.lastLapTime = this.secondsElapsed;
+    this.setLap(this.lapNumber, lapTime);
+  };
+
+  reset() {
+    this.stop();
+    this.secondsElapsed = 0;
+    this.lastLapTime = 0;
+    this.lapNumber = 0;
+    this.updateTime(0);
+    this.clearLaps();
   };
 };
 

@@ -158,30 +158,58 @@ paleidus funkciją, gautą objektą išlogginti.
 
 
 //-------------------STOPWATCH---------------------------------
-import TimerState from "./state.js";
-import { formatTime } from "./utilities.js";
+import TimerState from "./timerState.js";
+import { formatTime, calculateTime } from "./utilities.js";
 
-const state = new TimerState();
 
 const elements = {
     startBtn: document.querySelector('#btn-start'),
     stopBtn: document.querySelector('#btn-stop'),
-    timerBox: document.querySelector('#timer')
+    timerBox: document.querySelector('#timer'),
+    resetBtn: document.querySelector('#btn-reset'),
+    lapBtn: document.querySelector('#btn-lap'),
+    lapContainer: document.querySelector('#lap-container'),
 };
 
-function updateTimerText(timeElapsed) {
-    const seconds = timeElapsed % 60;
-    const minutes = Math.floor(timeElapsed / 60) % 60;
-    const hours = Math.floor(Math.floor(timeElapsed / 60) / 60);
+const updateTimerText = (timeElapsed) => {
+    const {seconds, minutes, hours} = calculateTime(timeElapsed);
     elements.timerBox.textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
 };
 
-elements.startBtn.addEventListener('click', function(){
-    state.start(updateTimerText);
+const createLap = (lapNumber, lapTime) => {
+  const lapParagraphElement = document.createElement('p');
+  const lapNumberNode = document.createTextNode(`Lap:${lapNumber} `);
+  const lapTimeElement = document.createElement('span');
+  const {seconds, minutes, hours} = calculateTime(lapTime);
+  lapTimeElement.textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+  lapParagraphElement.append(lapNumberNode, lapTimeElement);
+  elements.lapContainer.append(lapParagraphElement);
+};
+
+const clearLaps = () => {
+  elements.lapContainer.innerHTML = "";
+};
+
+const state = new TimerState({
+  updateTime: updateTimerText,
+  setLap: createLap,
+  clearLaps: clearLaps
 });
 
-elements.stopBtn.addEventListener('click', function(){
+elements.startBtn.addEventListener('click', () => {
+    state.start();
+});
+
+elements.stopBtn.addEventListener('click', () => {
     state.stop();
+});
+
+elements.resetBtn.addEventListener('click', () => {
+  state.reset();
+});
+
+elements.lapBtn.addEventListener('click', () => {
+  state.lap();
 });
 
 // let time = 0;

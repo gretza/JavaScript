@@ -1,9 +1,21 @@
 export const formatTime = (time) => {
-    if(time < 10) {
-      return`0${time}`;
-    };
-    return time;
-}
+  if (time < 10) {
+    return `0${time}`;
+  }
+  return time;
+};
+
+export const calculateTime = (secondsElapsed) => {
+  const seconds = secondsElapsed % 60;
+  const minutes = Math.floor(secondsElapsed / 60) % 60;
+  const hours = Math.floor(Math.floor(secondsElapsed / 60) / 60);
+  return { hours, minutes, seconds };
+};
+
+// const time = 120;
+// const second = time % 60;
+// const minutes = Math.floor(time / 60) % 60;
+// const hours = Math.floor(Math.floor(time / 60) / 60);
 
 // ternary expression------------
 
@@ -30,10 +42,10 @@ export const formatTime = (time) => {
 // const answer1 = time < 10 ? `0${time}` : time > 60 ? time % 60 : time;
 
 /**
-* ? - nurodo kad buvo parašyta sąlyga
-* : - atskiria vertę if true nuo vertės if false formatu:
-* <true> : <false>
-*
-* <condition|boolean> ? <true value> : <false value>
-* <condition|boolean> ? <true value> : <condition|boolean> ? <second true value> : <false value>
-*/
+ * ? - nurodo kad buvo parašyta sąlyga
+ * : - atskiria vertę if true nuo vertės if false formatu:
+ * <true> : <false>
+ *
+ * <condition|boolean> ? <true value> : <false value>
+ * <condition|boolean> ? <true value> : <condition|boolean> ? <second true value> : <false value>
+ */
