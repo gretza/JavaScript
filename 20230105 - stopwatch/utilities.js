@@ -1,9 +1,4 @@
-export const formatTime = (time) => {
-  if (time < 10) {
-    return `0${time}`;
-  }
-  return time;
-};
+export const formatTime = (time) => (time < 10 ? `0${time}` : `${time}`);
 
 export const calculateTime = (secondsElapsed) => {
   const seconds = secondsElapsed % 60;
@@ -11,6 +6,7 @@ export const calculateTime = (secondsElapsed) => {
   const hours = Math.floor(Math.floor(secondsElapsed / 60) / 60);
   return { hours, minutes, seconds };
 };
+
 
 // const time = 120;
 // const second = time % 60;
